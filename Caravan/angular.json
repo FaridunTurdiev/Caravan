@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "caravan",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -102,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "1d3e7819-96d3-4ac6-85e0-08785ccdafdf"
   }
 }
