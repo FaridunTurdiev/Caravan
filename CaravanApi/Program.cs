@@ -1,5 +1,5 @@
-
 using CaravanApi.Context;
+using CaravanApi.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -36,6 +36,8 @@ namespace CaravanApi
             {
                 option.UseSqlServer(builder.Configuration.GetConnectionString("DbConnectionStr"));
             });
+
+            builder.Services.AddScoped<IEmailService, EmailService>();
 
             services.AddAuthentication(a =>
             {

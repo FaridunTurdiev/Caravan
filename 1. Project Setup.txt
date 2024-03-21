@@ -1,10 +1,10 @@
 1. **Project Setup:**
-   - Install Visual Studio, Node.js, Angular CLI, and Ionic CLI: By April 1st.
-   - Create .NET Web API project, Angular project, and set up Ionic framework: By April 5th.
+   - Install Visual Studio, Node.js, Angular CLI, and Ionic CLI: By April 1st.						done
+   - Create .NET Web API project, Angular project, and set up Ionic framework: By April 5th.				done
 
 2. **Backend Development:**
-   - Define API endpoints and create data models: By April 10th.
-   - Implement user authentication and authorization: By April 20th.
+   - Define API endpoints and create data models: By April 10th.							
+   - Implement user authentication and authorization: By April 20th.							done
    - Set up database and implement CRUD operations: By May 5th.
    - Implement business logic and test API endpoints: By May 20th.
 
