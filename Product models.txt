@@ -1,0 +1,124 @@
+Product models:
+
+
+public class Category
+{
+    public int CategoryId { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    // For hierarchical category structure
+    public int? ParentCategoryId { get; set; }
+    public virtual Category ParentCategory { get; set; }
+    public virtual ICollection<Category> SubCategories { get; set; }
+    // Navigation property
+    public virtual ICollection<Product> Products { get; set; }
+
+    public Category()
+    {
+        SubCategories = new HashSet<Category>();
+        Products = new HashSet<Product>();
+    }
+}
+
+
+public class ProductImage
+{
+    public int ProductImageId { get; set; }
+    public int ProductId { get; set; }
+    public string ImageUrl { get; set; }
+    // Navigation property
+    public virtual Product Product { get; set; }
+}
+
+public class Review
+{
+    public int ReviewId { get; set; }
+    public int ProductId { get; set; }
+    public string UserId { get; set; } // The ID of the user who wrote the review.
+    public string Content { get; set; }
+    public int Rating { get; set; } // Existing product rating.
+    public int SellerRating { get; set; } // New seller rating.
+    
+    // Navigation properties
+    public virtual Product Product { get; set; }
+    public virtual User User { get; set; }
+}
+
+
+
+
+public class Wishlist
+{
+    public int WishlistId { get; set; }
+    public string UserId { get; set; } // Changed from CustomerId to UserId for consistency
+    // Navigation property for many-to-many relationship
+    public virtual ICollection<WishlistProduct> WishlistProducts { get; set; }
+    // Link to User
+    public virtual User User { get; set; }
+
+    public Wishlist()
+    {
+        WishlistProducts = new HashSet<WishlistProduct>();
+    }
+}//zusammen
+public class WishlistProduct
+{
+    public int WishlistId { get; set; }
+    public int ProductId { get; set; }
+    // Navigation properties
+    public virtual Wishlist Wishlist { get; set; }
+    public virtual Product Product { get; set; }
+}
+
+
+public class Product
+{
+    public int ProductId { get; set; }
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+    public string Description { get; set; }
+    public int CategoryId { get; set; }
+    // New field for Seller
+    public string SellerId { get; set; }
+    // Navigation properties
+    public virtual Category Category { get; set; }
+    public virtual ICollection<ProductImage> Images { get; set; }
+    public virtual ICollection<Review> Reviews { get; set; }
+    // Link to User
+    public virtual User Seller { get; set; }
+
+    public Product()
+    {
+        Images = new HashSet<ProductImage>();
+        Reviews = new HashSet<Review>();
+    }
+}
+
+
+using Microsoft.EntityFrameworkCore;
+
+public class ECommerceContext : DbContext
+{
+    public ECommerceContext(DbContextOptions<ECommerceContext> options) : base(options)
+    {
+    }
+
+    public DbSet<User> Users { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<ProductImage> ProductImages { get; set; }
+    public DbSet<Review> Reviews { get; set; }
+    public DbSet<Wishlist> Wishlists { get; set; }
+    public DbSet<WishlistProduct> WishlistProducts { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        // Many-to-many for Wishlist and Products
+        modelBuilder.Entity<WishlistProduct>().HasKey(wp => new { wp.WishlistId, wp.ProductId });
+
+        // You can configure the schema further here, if needed.
+    }
+}
+

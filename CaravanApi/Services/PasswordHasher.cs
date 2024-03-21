@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 
 namespace CaravanApi.Services;
-internal class PasswordHasher
+public class PasswordHasher
 {
     /// <summary> To hash passwords before saving them to the DB </summary>
     public static void HashPassword(string password, out byte[] passwordHash, out byte[] passwordSalt)

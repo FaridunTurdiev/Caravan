@@ -4,10 +4,10 @@ using MimeKit;
 
 namespace CaravanApi.Services
 {
-    public class ResetPasswordService : IEmailService
+    public class EmailService : IEmailService
     {
         private readonly IConfiguration _config;
-        public ResetPasswordService(IConfiguration configuration)
+        public EmailService(IConfiguration configuration)
         {
             _config = configuration;
         }

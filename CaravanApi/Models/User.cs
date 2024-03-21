@@ -25,17 +25,19 @@ public class User
 
     /// <summary> Will be given to everyone. e.g. "User"</summary>
     /// <example>Admin</example>
-    public string? Role { get; set; }
+    public UserRole UserRole { get; set; }
 
     /// <summary> Every user must provide email for ragistration.</summary>
     /// <example>müller.bong@gmail.com</example>
     public string? Email { get; set; }
 
-    /// <summary> PasswordHash needed to hash password before saving it tohe DB. </summary>
-    public byte[] PasswordHash { get; set; }
+    public string? SellerId { get; set; }
+
+    /// <summary> PasswordHash needed to hash password before saving it to the DB. </summary>
+    public byte[]? PasswordHash { get; set; }
 
     /// <summary> PasswortSalt needed for hashing to be done. </summary>
-    public byte[] PasswordSalt { get; set; }
+    public byte[]? PasswordSalt { get; set; }
 
     /// <summary> RefreshToken is accestoken which will be refreshed continuosly. </summary>
     public string? RefreshToken { get; set; }
