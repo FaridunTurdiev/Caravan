@@ -54,8 +54,6 @@ namespace CaravanApi.Controllers
             if (user == null)
                 return NotFound(new { Message = "User not Found." });
 
-            if(user.UserRole == UserRole.Seller)
-                return BadRequest();//here will be logic to check SellerId
 
             if (!PasswordHasher.VerifyPassword(userObj.Password, user.PasswordHash, user.PasswordSalt))
                 return BadRequest(new { Message = "Wrong password." });
@@ -89,8 +87,10 @@ namespace CaravanApi.Controllers
             if (await CheckEmailExist(userObj.Email))
                 return BadRequest(new { Message = "This email is already in use! Choos another email" });
 
-            if (await CheckSellerExist(userObj.SellerId))
-                return BadRequest(new { Message = "The Current SellerId is already in use" });
+            //comes logic to register Sellers using some id of them
+
+            //if (await CheckSellerExist(userObj.SellerId))
+            //    return BadRequest(new { Message = "The Current SellerId is already in use" });
 
             //Checking if the Password is enough strong
             var password = CheckPasswordStrength(userObj.Password);
