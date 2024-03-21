@@ -45,3 +45,4 @@ Make sure to regularly review progress and adjust deadlines or resources as need
 7.	AI advices for searched products 
 8.	Notifications about events and alarms 
 9.	To give grades and feedback about seller and their products
+10.	Chat with Seller
