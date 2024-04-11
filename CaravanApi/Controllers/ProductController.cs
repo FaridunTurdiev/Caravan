@@ -67,10 +67,10 @@ namespace RichShopAuthApi.Controllers
             if (photo != null)
 
             {
-                var path = Path.Combine("C:\\Users\\faridun.turdiev\\Here\\Programming\\Projects\\Shop\\MyShop\\Rich-Shop\\src\\assets", "Images",
+                var path = Path.Combine("C: \\Users\\faridun.turdiev\\Here\\Programming\\Projects\\Caravan\\CaravanFrontend\\src\\assets", "Images",
                     photo.FileName);
 
-                product.FilePath = path.Replace("C:\\Users\\faridun.turdiev\\Here\\Programming\\Projects\\Shop\\MyShop\\Rich-Shop\\src\\", "").Replace("\\", "/");
+                product.FilePath = path.Replace("C: \\Users\\faridun.turdiev\\Here\\Programming\\Projects\\Caravan\\CaravanFrontend\\src\\", "").Replace("\\", "/");
 
                 using (var fileStream = new FileStream(path, FileMode.Create))
                 {
@@ -78,8 +78,8 @@ namespace RichShopAuthApi.Controllers
                 }
             }
 
-
-            await _db.AddAsync(product);
+        
+        await _db.AddAsync(product);
             await _db.SaveChangesAsync();
 
             return Created(Url.Action("GetAllProducts", new { name = product.Name })!, product);
