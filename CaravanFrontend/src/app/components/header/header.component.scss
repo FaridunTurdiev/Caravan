@@ -1,0 +1,17 @@
+  #headerContent{
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #headerRight{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+  }
+
+  #mainSearchinput{
+    width: 200px;
+  }
