@@ -1,0 +1,48 @@
+1. **Project Setup:**
+   - Install Visual Studio, Node.js, Angular CLI, and Ionic CLI: By April 1st.						done
+   - Create .NET Web API project, Angular project, and set up Ionic framework: By April 5th.				done
+
+2. **Backend Development:**
+   - Define API endpoints and create data models: By April 10th.							
+   - Implement user authentication and authorization: By April 20th.							done
+   - Set up database and implement CRUD operations: By May 5th.
+   - Implement business logic and test API endpoints: By May 20th.
+
+3. **Frontend Development (Angular):**
+   - Design layout wireframes and create Angular components: By May 1st.
+   - Set up Angular routing and create service for API integration: By May 5th.
+   - Implement user authentication screens and authorization checks: By May 15th.
+   - Create UI components, forms, and test components and services: By May 30th.
+
+4. **Mobile App Development (Ionic):**
+   - Design mobile UI wireframes and create Ionic components: By May 10th.
+   - Set up Ionic routing and create service for API integration: By May 15th.
+   - Implement user authentication screens and offline storage: By May 25th.
+   - Implement device-specific features and test on different devices: By June 5th.
+
+5. **Integration and Testing:**
+   - Integrate Angular frontend with .NET Web API backend and test API integrations: By June 10th.
+   - Conduct end-to-end testing and write unit tests for backend logic: By June 12th.
+   - Write unit tests for frontend components and integration tests: By June 15th.
+
+6. **Deployment:**
+   - Deploy .NET Web API to a server and build Angular app for production: By June 10th.
+   - Deploy Angular app to a web server or cloud platform and package Ionic app for app stores: By June 15th.
+
+7. **Monitoring and Maintenance:**
+   - Set up logging and monitoring tools: By June 15th.
+   - Monitor application performance and user behavior ongoing.
+   - Regularly update dependencies and address reported issues.
+
+Make sure to regularly review progress and adjust deadlines or resources as needed to meet the final deadline of June 15th.
+
+1.	Parking
+2.	Bills(patent) managment system with notifications
+3.	Advertisement for startups
+4.	Super search engine 
+5.	To show potential Product for buying to customers 
+6.	To switch between sell and buy modes
+7.	AI advices for searched products 
+8.	Notifications about events and alarms 
+9.	To give grades and feedback about seller and their products
+10.	Chat with Seller

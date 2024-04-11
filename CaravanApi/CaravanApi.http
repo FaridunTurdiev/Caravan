@@ -1,0 +1,6 @@
+@CaravanApi_HostAddress = http://localhost:5173
+
+GET {{CaravanApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
