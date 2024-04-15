@@ -3,13 +3,13 @@
    - Create .NET Web API project, Angular project, and set up Ionic framework: By April 5th.				done
 
 2. **Backend Development:**
-   - Define API endpoints and create data models: By April 10th.							
+   - Define API endpoints and create data models: By April 10th.							done
    - Implement user authentication and authorization: By April 20th.							done
-   - Set up database and implement CRUD operations: By May 5th.
-   - Implement business logic and test API endpoints: By May 20th.
+   - Set up database and implement CRUD operations: By May 5th.								done
+   - Implement business logic and test API endpoints: By May 20th.								X
 
 3. **Frontend Development (Angular):**
-   - Design layout wireframes and create Angular components: By May 1st.
+   - Design layout wireframes and create Angular components: By May 1st.						
    - Set up Angular routing and create service for API integration: By May 5th.
    - Implement user authentication screens and authorization checks: By May 15th.
    - Create UI components, forms, and test components and services: By May 30th.
