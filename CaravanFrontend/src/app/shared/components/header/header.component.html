@@ -1,7 +1,7 @@
-<ion-header [translucent]="true">
+<ion-header>
   <div id="headerContent">
     <div id="headerLeft">
-      <i class="fa-solid fa-cart-shopping"></i>
+      <img id="logo" [src]="logo">
     </div>
     <div id="headerCenter">
           <ion-input labelPlacement="stacked"  id="mainSearchinput" type="text" placeholder="Search">
@@ -9,7 +9,9 @@
           </ion-input>
     </div>
     <div id="headerRight">
-      <i class="fa-regular fa-user"></i>
+      <button id="account" class="btn btn-outline-primary" routerLink="/account">
+        <i class="fa-regular fa-user"></i>
+      </button>
     </div>
   </div>
 </ion-header>
