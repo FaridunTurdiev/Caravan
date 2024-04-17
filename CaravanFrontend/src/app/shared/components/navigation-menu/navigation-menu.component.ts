@@ -22,6 +22,7 @@ const hide = trigger('hide', [exitTransition]);
   templateUrl: './navigation-menu.component.html',
   styleUrls: ['./navigation-menu.component.scss'],
   standalone: true,
+  animations: [trigger('show', [enterTransition]), trigger('hide', [exitTransition])],
   imports: [ RouterLink]
 })
 export class NavigationMenuComponent  implements OnInit {

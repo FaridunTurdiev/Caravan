@@ -24,3 +24,23 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+
+
+
+// Custom botstrap colors.
+$darkred: #a51129;
+$yellow: #f3bd48;
+$green: #4a9462;
+$cyan: #006496;
+$gray-800: #3c3c3b;
+$gray-100: #f6f6f6;
+$purple: #8f4899;
+$caravan-brand: #472aff;
+
+// Custom color assignment.
+$primary: $caravan-brand;
+$danger: $darkred;
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
