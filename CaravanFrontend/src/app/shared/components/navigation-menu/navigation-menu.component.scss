@@ -8,6 +8,9 @@
   bottom: 15px;
   left: 15px;
   z-index: 100;
+}
+
+#menu-button i{
   font-size: x-large;
 }
 
@@ -26,9 +29,9 @@ nav {
 
   #home, #addProduct, #messages, #settings, #cart{
     border-radius: 50%;
-    border: none;
-    width: 90px;
-    height: 90px;
+    border: 1px rgba(204, 214, 115, 0.5) solid !important;
+    width: 74px;
+    height: 74px;
     position: fixed;
   }
 
@@ -57,13 +60,9 @@ nav {
     left: 80px;
   }
 
-  i{
-    font-size: x-large;
-  }
-
 
   .buttonLabel{
     margin: 0;
     padding: 0;
-    font-size: small;
+    font-size: x-small;
   }

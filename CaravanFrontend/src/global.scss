@@ -29,18 +29,25 @@
 
 
 // Custom botstrap colors.
-$darkred: #a51129;
 $yellow: #f3bd48;
 $green: #4a9462;
 $cyan: #006496;
 $gray-800: #3c3c3b;
 $gray-100: #f6f6f6;
 $purple: #8f4899;
-$caravan-brand: #472aff;
+$caravan-default-primary: #472aff;
 
 // Custom color assignment.
-$primary: $caravan-brand;
-$danger: $darkred;
+$primary: $caravan-default-primary;
+$danger: red;
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+i{
+    font-size: large;
+}
+
+button{
+    border-radius: 50%;
+}

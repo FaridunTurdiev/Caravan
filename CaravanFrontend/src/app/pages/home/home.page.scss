@@ -1,27 +1,86 @@
-#container {
+.main-content{
+  display: block;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+ion-col {
+  border: solid 2px #fff;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-row.ads-row{
+  height: 200px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.product-categories{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: fit-content;
+  padding: 10px;
 }
 
-#container a {
-  text-decoration: none;
+.category-icon{
+  font-size: x-large;
+}
+
+.category{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  margin: 5px 15px
+}
+
+.category p{
+margin: 0;
+font-size: small;
+}
+
+.category button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+ion-card{
+ width: 380px;
+ overflow-x: hidden;
+}
+
+ion-card img{
+  max-width: 100%;
+}
+
+ion-card-content{
+  height: 20px;
+  overflow-y: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  ion-card {
+    width: 42% !important;
+  }
+  .to-hide{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  ion-card {
+    width: 100% !important;
+  }
 }
