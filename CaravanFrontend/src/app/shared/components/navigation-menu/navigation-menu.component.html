@@ -1,31 +1,31 @@
-<button (click)="onMenuButtonClick()" id="menu-button" class="btn btn-primary">
+<button (click)="onMenuButtonClick()" id="menu-button" class="btn btn-primary shadow">
   <i class="fa-solid fa-bars"></i>
 </button>
 
 @if(navBars){
   <nav @show @hide class="bg-primary-subtle">
 
-    <button class="btn btn-outline-primary" id="home" routerLink="/home" (click)="onMenuButtonClick()">
+    <button class="btn btn-outline-primary shadow-sm" id="home" routerLink="/home" (click)="onMenuButtonClick()">
       <i class="fa-solid fa-house"></i><br>
       <p class="buttonLabel">Home</p>
     </button>
 
-    <button class="btn btn-outline-primary" id="messages" routerLink="/messages" (click)="onMenuButtonClick()">
+    <button class="btn btn-outline-primary shadow-sm" id="messages" routerLink="/messages" (click)="onMenuButtonClick()">
       <i class="fa-solid fa-comment"></i>
       <br><p class="buttonLabel">Messagess</p>
     </button>
 
-    <button class="btn btn-outline-primary" id="settings" routerLink="/settings" (click)="onMenuButtonClick()">
+    <button class="btn btn-outline-primary shadow-sm" id="settings" routerLink="/settings" (click)="onMenuButtonClick()">
       <i class="fa-solid fa-gear"></i>
       <br><p class="buttonLabel">Settings</p>
     </button>
 
-    <button class="btn btn-outline-primary" id="cart" routerLink="/account" (click)="onMenuButtonClick()">
+    <button class="btn btn-outline-primary shadow-sm" id="cart" routerLink="/account" (click)="onMenuButtonClick()">
       <i  class="fa-regular fa-user"></i>
       <br><p class="buttonLabel">Account</p>
     </button>
 
-    <button class="btn btn-outline-primary" id="addProduct" routerLink="/add-product" (click)="onMenuButtonClick()">
+    <button class="btn btn-outline-primary shadow-sm" id="addProduct" routerLink="/add-product" (click)="onMenuButtonClick()">
       <i class="fa-solid fa-upload"></i><br>
       <p class="buttonLabel">Add Product</p>
     </button>

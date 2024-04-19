@@ -28,7 +28,7 @@ namespace RichShopAuthApi.Controllers
 
 
         //Gets all products.
-        [HttpGet("getAllProducts")]
+        [HttpGet("GetAllProducts")]
         public async Task<IEnumerable<Product>> GetAllProducts(string? name = null, string? category = null)
         {
             _logger.LogDebug($"{nameof(GetAllProducts)}()");
@@ -60,17 +60,17 @@ namespace RichShopAuthApi.Controllers
         }
 
         //<summary> Creates new product.
-        [HttpPost("createProduct")]
+        [HttpPost("CreateProduct")]
         public async Task<IActionResult> CreateProduct(IFormFile photo, IFormCollection formCollection)
         {
             var product = JsonConvert.DeserializeObject<Product>(formCollection["product"]);
             if (photo != null)
 
             {
-                var path = Path.Combine("C: \\Users\\faridun.turdiev\\Here\\Programming\\Projects\\Caravan\\CaravanFrontend\\src\\assets", "Images",
+                var path = Path.Combine( "C:\\Users\\faridun.turdiev\\Here\\Programming\\Projects\\Caravan\\CaravanFrontend\\src\\assets\\", "Images",
                     photo.FileName);
 
-                product.FilePath = path.Replace("C: \\Users\\faridun.turdiev\\Here\\Programming\\Projects\\Caravan\\CaravanFrontend\\src\\", "").Replace("\\", "/");
+                product.FilePath = path.Replace("C:\\Users\\faridun.turdiev\\Here\\Programming\\Projects\\Caravan\\CaravanFrontend\\src\\", "").Replace("\\", "/");
 
                 using (var fileStream = new FileStream(path, FileMode.Create))
                 {
@@ -78,8 +78,7 @@ namespace RichShopAuthApi.Controllers
                 }
             }
 
-        
-        await _db.AddAsync(product);
+            await _db.AddAsync(product);
             await _db.SaveChangesAsync();
 
             return Created(Url.Action("GetAllProducts", new { name = product.Name })!, product);
@@ -89,7 +88,7 @@ namespace RichShopAuthApi.Controllers
 
 
         //Updates existing products data.
-        [HttpPut("updateProduct")]
+        [HttpPut("UpdateProduct")]
         public async Task<IActionResult> UpdateProduct(string name, Product changed)
         {
             _logger.LogDebug($"{nameof(UpdateProduct)}({name}, {changed})");
@@ -117,7 +116,7 @@ namespace RichShopAuthApi.Controllers
         }
 
         //Deletes a specific product.
-        [HttpDelete("deleteProduct")]
+        [HttpDelete("DeleteProduct")]
         public async Task<IActionResult> DeleteProduct(string name)
         {
             _logger.LogDebug($"{nameof(DeleteProduct)}({name})");

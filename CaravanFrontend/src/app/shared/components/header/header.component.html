@@ -1,17 +1,15 @@
-<ion-header>
-  <div id="headerContent">
-    <div id="headerLeft">
-      <img id="logo" [src]="logo">
-    </div>
-    <div id="headerCenter">
-          <ion-input labelPlacement="stacked"  class="mainSearchinput" type="text" placeholder="Search">
-            <i slot="start" class="fa-solid fa-magnifying-glass"></i>
-          </ion-input>
-    </div>
-    <div id="headerRight">
-      <button id="cart" class="btn btn-outline-primary" routerLink="/cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </button>
-    </div>
+<div id="headerContent">
+  <div id="headerLeft">
+    <img id="logo" [src]="logo" />
   </div>
-</ion-header>
+  <div id="headerCenter">
+    <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+  </div>
+  <div id="headerRight">
+    <button id="cart" class="btn btn-outline-primary" routerLink="/cart">
+      <i class="fa-solid fa-cart-shopping"></i>
+    </button>
+  </div>
+</div>

@@ -5,9 +5,76 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">add-product</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="upload-body">
+    <form [formGroup]="AddProductForm" (ngSubmit)=" upload()">
+      <table>
+        <!-- <tr>
+            <td>Id</td>
+            <td>
+                <input style="width: 180px;" type="number" formControlName="id">
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">Photos</td>
+            <td>
+                <input type="file" multiple (change)="selectPhotos($event)">
+            </td>
+        </tr> -->
+        <tr>
+          <td>Image:</td>
+          <td>
+            <input type="file" (change)="selectPhoto($event)" />
+          </td>
+        </tr>
+        <tr>
+          <td>name:</td>
+          <td>
+            <input
+              style="width: 180px"
+              type="text"
+              formControlName="name"
+              placeholder="Name of the Product"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Category:</td>
+          <td>
+            <input
+              style="width: 180px"
+              type="text"
+              formControlName="category"
+              placeholder="Choose the category"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Price:</td>
+          <td>
+            <input
+              style="width: 180px"
+              type="text"
+              formControlName="price"
+              inputmode="numeric"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Description:</td>
+          <td>
+            <textarea
+              style="width: 180px"
+              formControlName="description"
+              cols="20"
+              rows="5"
+              placeholder="Give description to your product"
+            ></textarea>
+          </td>
+        </tr>
+      </table>
+      <div style="display: flex; justify-content: center">
+        <input type="submit" value="Upload" />
+      </div>
+    </form>
+  </div>
 </ion-content>
